@@ -1,0 +1,113 @@
+
+class Resident:
+    # initialize the attributes
+    def __init__(self, resident_name, resident_age, resident_ID, risident_gender, resident_password):
+        self.resident_name = resident_name
+        self.resident_age = resident_age
+        self.resident_ID = resident_ID
+        self.resident_gender = resident_gender
+
+    # set the attributes
+    def set_name(self, resident_name):
+        self.resident_name = resident_name
+
+    def set_id(self, resident_ID):
+        self.resident_ID = resident_ID
+
+    def set_age(self, resident_age):
+        self.employee_age = employee_age
+
+    def set_gender(self, resident_gender):
+        self.resident_gender = resident_gender
+        
+    def set_password(self, resident_password):
+        self.resident_password = resident_password
+
+    # return the attributes
+    def get_name(self):
+        return self.resident_name
+
+    def get_age(self):
+        return self.resident_age
+
+    def get_id(self):
+        return self.resident_ID
+
+    def get_gender(self):
+        return self.resident_gender
+        
+            
+    def get_password(self):
+       return self.resident_password
+   
+   def edit_resident(self, resident_name, resident_age, resident_ID, resident_gender, resident_password):
+       self.resident_name = resident_name
+       self.resident_age = resident_age
+       self.resident_ID = resident_ID
+       self.resident_gender = resident_gender
+       self.resident_password = resident_password
+       print("You have succesfully updated:" + self.resident_name)
+
+    # return the objects state as a string
+    def __str__(self):
+        return 'Name: ' + self.resident_name + \
+               '\nID number: ' + self.resident_ID + \
+               '\nAge: ' + self.resident_age + \
+               '\nGender: ' + self.resident_gender
+        
+ class AddResident(Resident):
+ 
+   #AddResident is a a child class derived from Resident class so we pass the attributes from __init__(self):
+   def __init__(self, resident_name, resident_age, resident_ID, resident_gender):
+       Employee.__init__(resident_name, resident_age, resident_ID, resident_gender)
+
+   #function to add a new instance of employee; then will print out to cofirm success
+   def add_resident(self, resident_name, resident_age, resident_ID, resident_gender):
+       self.resident_name = resident_name
+       self.resident_age = resident_age
+       self.resident_ID = resident_ID
+       self.resident_gender = resident_gender
+       print("You have succesfully added:" + self.resident_name)
+
+   #function to remove the instance that is called
+   def remove_resident(self):
+       print("You have successfully removed resident:" + self.resident_name)
+       del self.resident_name
+       del self.resident_age
+       del self.resident_ID
+       del self.resident_gender
+
+   #function to update the contents of a instance
+   def edit_resident(self, new_resident_name, new_resident_age, new_resident_ID, new_resident_gender):
+       self.resident_name = new_resident_name
+       self.resident_age = new_resident_age
+       self.resident_ID = new_resident_ID
+       self.resident_gender = new_resident_gender
+       print("You have succesfully updated:" + self.resident_name)
+ 
+        
+        
+class Insurance:
+    insurance_name = None
+    expiration = None
+    paid = None
+    def __init__(self, insurance_name, expiration, paid ):
+        self.insurance_name = insurance_name
+        self.insurance_expiration = insurance_expiration
+        self.insurance_paid = insurance_paid
+        
+       #function to remove the instance that is called
+   def remove_insurance(self):
+       print("You have successfully removed insurance:" + self.insurance_name)
+       del self.insurance_name
+       del self.insurance_expiration
+       del self.insurance_paid
+     
+
+   #function to update the contents of a instance
+   def edit_insurance(self, insurance_name, insurance_expiration, insurance_paid):
+       self.insurance_name = insurance_name
+       self.insurance_expiration = insurance_expiration
+       self.insurance_paid = insurance_paid
+       print("You have succesfully updated:" + self.insurance_name)
+ 
